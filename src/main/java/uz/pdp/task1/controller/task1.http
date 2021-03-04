@@ -1,0 +1,12 @@
+POST http://localhost:8080/hotel
+Content-Type: application/json
+
+{
+  "name": "Hyatt"
+}
+
+###
+GET http://localhost:8080/room/byHotelId/1
+Accept: application/json
+
+###
