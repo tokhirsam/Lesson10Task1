@@ -39,8 +39,8 @@ public class RoomController {
 
     }
 
-    @GetMapping("/byHotelId/{hotelId}/{page}")
-    public Page<Room> getRoomsByHotelId(@PathVariable Integer hotelId, @PathVariable int page){
+   @GetMapping("/byHotelId/{hotelId}")
+    public Page<Room> getRoomsByHotelId(@PathVariable Integer hotelId, @RequestParam int page){
         Pageable pageable = PageRequest.of(page, 2);
         return roomRepository.findAllByHotelId(hotelId, pageable);
     }
